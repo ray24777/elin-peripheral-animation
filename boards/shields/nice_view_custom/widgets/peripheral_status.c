@@ -23,32 +23,38 @@ LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 
 #include "peripheral_status.h"
 
-LV_IMG_DECLARE(corro01);
-LV_IMG_DECLARE(corro02);
-LV_IMG_DECLARE(corro03);
-LV_IMG_DECLARE(corro04);
-LV_IMG_DECLARE(corro05);
-LV_IMG_DECLARE(corro06);
-LV_IMG_DECLARE(corro07);
-LV_IMG_DECLARE(corro08);
-LV_IMG_DECLARE(corro09);
-LV_IMG_DECLARE(corro10);
-LV_IMG_DECLARE(corro11);
-LV_IMG_DECLARE(corro12);
+LV_IMG_DECLARE(frame_00);
+LV_IMG_DECLARE(frame_01);
+LV_IMG_DECLARE(frame_02);
+LV_IMG_DECLARE(frame_03);
+LV_IMG_DECLARE(frame_04);
+LV_IMG_DECLARE(frame_05);
+LV_IMG_DECLARE(frame_06);
+LV_IMG_DECLARE(frame_07);
+LV_IMG_DECLARE(frame_08);
+LV_IMG_DECLARE(frame_09);
+LV_IMG_DECLARE(frame_10);
+LV_IMG_DECLARE(frame_11);
+LV_IMG_DECLARE(frame_12);
+LV_IMG_DECLARE(frame_13);
+LV_IMG_DECLARE(frame_14);
 
 const lv_img_dsc_t *anim_imgs[] = {
-    &corro01,
-    &corro02,
-    &corro03,
-    &corro04,
-    &corro05,
-    &corro06,
-    &corro07,
-    &corro08,
-    &corro09,
-    &corro10,
-    &corro11,
-    &corro12,
+    &frame_00,
+    &frame_01,
+    &frame_02,
+    &frame_03,
+    &frame_04,
+    &frame_05,
+    &frame_06,
+    &frame_07,
+    &frame_08,
+    &frame_09,
+    &frame_10,
+    &frame_11,
+    &frame_12,
+    &frame_13,
+    &frame_14,
 };
 
 static sys_slist_t widgets = SYS_SLIST_STATIC_INIT(&widgets);
@@ -146,7 +152,7 @@ int zmk_widget_status_init(struct zmk_widget_status *widget, lv_obj_t *parent) {
 
     lv_obj_t * art = lv_animimg_create(widget->obj);            //<--
     lv_obj_center(art);                                         //<--
-    lv_animimg_set_src(art, (const void **) anim_imgs, 12);     //<--
+    lv_animimg_set_src(art, (const void **) anim_imgs, 15);     //<--
     lv_animimg_set_duration(art, CONFIG_CUSTOM_ANIMATION_SPEED);//<--
     lv_animimg_set_repeat_count(art, LV_ANIM_REPEAT_INFINITE);  //<--
     lv_animimg_start(art);                                      //<--
